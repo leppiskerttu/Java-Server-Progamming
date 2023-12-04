@@ -1,7 +1,12 @@
-## Create servlets to add data to mariadb database
+# Student Management Servlets for MariaDB
 
-** Add new student to the database
-** View all students from the database
-** Update student based on number
-** Delete student based on number
-** Student will have number: INT, lastname: VARCHAR, firstname: VARCHAR
+## Operations
+
+1. **Add a New Student**
+
+2. **View All Students**
+
+3. **Update Student Based on Number**
+
+4. **Delete Student Based on Number**
+
