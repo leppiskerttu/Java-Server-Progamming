@@ -1,0 +1,16 @@
+<!-- course-details.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details</title>
+</head>
+<body>
+    <h2>Course Details</h2>
+
+    <p th:text="${course.courseName}"></p>
+
+    <a th:href="@{/api/courses}">Back to All Courses</a>
+</body>
+</html>

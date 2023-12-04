@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/addStudent.css}" />
+</head>
+<body>
+    <h2>Add a New Student</h2>
+
+    <form th:action="@{/api/students/add}" th:object="${student}" method="post">
+        <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" th:field="*{firstname}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" th:field="*{lastname}" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" th:field="*{email}" required>
+        </div>
+
+        <button type="submit" class="btn-primary">Add Student</button>
+    </form>
+
+    <a th:href="@{/api/main}" class="back-link">Back to All Students</a>
+</body>
+</html>

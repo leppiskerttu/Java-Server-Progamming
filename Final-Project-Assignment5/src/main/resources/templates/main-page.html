@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link th:href="@{/css/Main.css}" rel="stylesheet">
+    <title>Main Page</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <a href="/login" class="button">Login</a>
+            <a href="/logout" class="button">Logout</a>
+            <a href="/register" class="button">Register</a>
+            <a href="/" class="button">Front page</a>
+        </div>    
+        <h3>All Courses</h3>
+        <ul>
+            <li th:each="course : ${courses}">
+                <div>
+                    <a th:href="@{/api/courses/{id}(id=${course.id})}" th:text="${course.courseName}"></a>
+                    <span th:text="' - ' + ${course.teacher}"></span>
+                </div>
+            </li>
+        </ul>
+
+        <a href="/api/courses/add" class="button">Add Course</a>
+
+        <h3>All Students</h3>
+        <ul>
+            <li th:each="student : ${students}">
+                <div>
+                    <a th:href="@{/api/students/{id}(id=${student.id})}" th:text="${student.studentName}"></a>
+                    <span th:text="' - ' + ${student.firstname} + ' ' + ${student.lastname} + ' (' + ${student.email} + ')'"></span>
+                </div>
+            </li>
+        </ul>
+
+        <a href="/api/students/add" class="button">Add Student</a>
+    </div>
+</body>
+</html>
