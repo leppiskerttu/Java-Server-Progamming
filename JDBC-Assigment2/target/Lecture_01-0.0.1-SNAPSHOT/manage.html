@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Management</title>
+</head>
+<body>
+    <h1>Add User</h1>
+    <form action="addUserServlet" method="post">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName"><br><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName"><br><br>
+
+        <label for="number">Number:</label>
+        <input type="text" id="number" name="number"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <h1>Delete User</h1>
+    <form action="deleteUserServlet" method="post">
+        <label for="deleteNumber">User Number to Delete:</label>
+        <input type="text" id="deleteNumber" name="deleteNumber"><br><br>
+
+        <input type="submit" value="Delete">
+    </form>
+
+    <h1>View Users</h1>
+    <form action="viewStudentsServlet" method="get">
+        <input type="submit" value="View Users">
+    </form>
+        <h1>Update User</h1>
+    <form action="updateStudentServlet" method="post">
+        <!-- Form for updating a user -->
+        <label for="numberToUpdate">User Number to Update:</label>
+        <input type="text" id="numberToUpdate" name="number"><br><br>
+
+        <label for="newFirstName">New First Name:</label>
+        <input type="text" id="newFirstName" name="newFirstName"><br><br>
+
+        <label for="newLastName">New Last Name:</label>
+        <input type="text" id="newLastName" name="newLastName"><br><br>
+
+        <input type="submit" value="Update">
+    </form>
+    
+</body>
+</html>
