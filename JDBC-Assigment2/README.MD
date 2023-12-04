@@ -1,4 +1,4 @@
-**Create servlets to add data to mariadb database
+##Create servlets to add data to mariadb database
 
 **Add new student to the database
 **View all students from the database
